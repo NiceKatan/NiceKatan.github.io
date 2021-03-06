@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://NiceKatan.github.io/favicon.ico?v=1615008347265">
+<link rel="shortcut icon" href="https://NiceKatan.github.io/favicon.ico?v=1615009168092">
 <link rel="stylesheet" href="https://NiceKatan.github.io/styles/main.css">
 
 
@@ -19,10 +19,11 @@
 
 
     <meta name="description" content="「 下一个更大元素 II 」
+
 暴力双循环嵌套判断结果
 
 1.优化查找次数
-朴素暴力求解法，是对每个数向右遍历，直到找到下一个比它大的数，时间复杂度为O(n2)O(n^2)O(n2)。同时暴力解法中会有浪费算力的情况，如[4,3,2,6]，暴..." />
+朴素暴力求解法，是对每个数向右遍历，直到找到下一个比它大的数，时间复杂度为O(n2)O(n^{2})O(n2)。同时暴力解法中会有浪费算力的情况，如[4,3,2,6..." />
     <meta name="keywords" content="LeetCode" />
   </head>
   <body>
@@ -32,7 +33,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://NiceKatan.github.io">
-        <img src="https://NiceKatan.github.io/images/avatar.png?v=1615008347265" class="site-logo">
+        <img src="https://NiceKatan.github.io/images/avatar.png?v=1615009168092" class="site-logo">
         <h1 class="site-title">Katan&#39;s Blog</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -102,10 +103,11 @@
             
             <div class="post-content" v-pre>
               <h2 id="a-hrefhttpsleetcode-cncomproblemsnext-greater-element-ii-target_blank下一个更大元素-iia"><strong>「 <a href="https://leetcode-cn.com/problems/next-greater-element-ii/" target="_blank">下一个更大元素 II</a> 」</strong></h2>
+<p><br></br></p>
 <h3 id="暴力双循环嵌套判断结果">暴力双循环嵌套判断结果</h3>
 <p><img src="https://NiceKatan.github.io/post-images/1615008006558.jpeg" alt="" loading="lazy"><br>
 <strong>1.优化查找次数</strong></p>
-<p><strong>朴素暴力</strong>求解法，是对每个数向右遍历，直到找到下一个比它大的数，时间复杂度为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>。同时暴力解法中会有浪费算力的情况，如<code>[4,3,2,6]</code>，暴力法会对<code>[4,3,2]</code>依次向后遍历，当寻找到6的时候才会停止遍历，而对于<code>[3,2]</code>来说显然是没有必要的，因为他们均小于4，它们下一个更大的元素一定和4相同，不需要重复遍历。根据数据元素单调的特性，就可以采用**「单调栈」<strong>来实现。</strong>「单调栈」<strong>顾名思义是栈底到栈顶元素均</strong>单调递增<strong>或</strong>单调递减<strong>的，对于类似「找到比当前值大/小的最近元素」类似问题都可以用</strong>「单调栈」**来解决。</p>
+<p><strong>朴素暴力</strong>求解法，是对每个数向右遍历，直到找到下一个比它大的数，时间复杂度为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n^{2})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>。同时暴力解法中会有浪费算力的情况，如<code>[4,3,2,6]</code>，暴力法会对<code>[4,3,2]</code>依次向后遍历，当寻找到6的时候才会停止遍历，而对于<code>[3,2]</code>来说显然是没有必要的，因为他们均小于4，它们下一个更大的元素一定和4相同，不需要重复遍历。根据数据元素单调的特性，就可以采用「<strong>单调栈</strong>」来实现。「<strong>单调栈</strong>」顾名思义是栈底到栈顶元素均<strong>单调递增</strong>或<strong>单调递减</strong>的，对于类似「找到比当前值大/小的最近元素」类似问题都可以用「<strong>单调栈</strong>」来解决。</p>
 <p><strong>具体实现：</strong></p>
 <p>对数组进行遍历，在入栈之前进行判断：</p>
 <ul>
@@ -119,7 +121,7 @@
 </ul>
 <p><strong>注意：栈内元素为元素下标而非元素本身，栈内元素可有存留(为数组最大值)。</strong></p>
 <p><strong>2.实现循环数组</strong></p>
-<p>由于题目给定一个循环数组(最后一个元素的下一个元素是数组的第一个元素)，因此我们采用遍历<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mo>∗</mo><mi>n</mi><mi>u</mi><mi>m</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">2*nums</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span><span class="mord mathdefault">u</span><span class="mord mathdefault">m</span><span class="mord mathdefault">s</span></span></span></span>长度的方法，对 下标<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 进行取模运算，实现循环数组。</p>
+<p>由于题目给定一个循环数组(最后一个元素的下一个元素是数组的第一个元素)，因此我们采用遍历<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mo>∗</mo><mi>n</mi><mi>u</mi><mi>m</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">2*nums</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span><span class="mord mathdefault">u</span><span class="mord mathdefault">m</span><span class="mord mathdefault">s</span></span></span></span>长度的方法，对 下标 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 进行取模运算，实现循环数组。</p>
 <h3 id="代码">代码</h3>
 <pre><code class="language-c++">class Solution {
 public:
@@ -177,6 +179,11 @@ var app = new Vue({
 
 </script>
 
+
+  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
 
 
 
