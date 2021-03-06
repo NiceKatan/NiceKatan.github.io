@@ -1,22 +1,111 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://NiceKatan.github.io</id>
-    <title>Katan&apos;s Blog</title>
-    <updated>2021-03-06T05:21:29.199Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://NiceKatan.github.io"/>
-    <link rel="self" href="https://NiceKatan.github.io/atom.xml"/>
-    <subtitle>想让自己变成更好的人</subtitle>
-    <logo>https://NiceKatan.github.io/images/avatar.png</logo>
-    <icon>https://NiceKatan.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Katan&apos;s Blog</rights>
-    <entry>
-        <title type="html"><![CDATA[LeetCode 503.下一个更大元素 II]]></title>
-        <id>https://NiceKatan.github.io/post/LC-503/</id>
-        <link href="https://NiceKatan.github.io/post/LC-503/">
-        </link>
-        <updated>2021-03-06T02:41:24.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="a-hrefhttpsleetcode-cncomproblemsnext-greater-element-ii-target_blank下一个更大元素-iia"><strong>「 <a href="https://leetcode-cn.com/problems/next-greater-element-ii/" target="_blank">下一个更大元素 II</a> 」</strong></h2>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>LeetCode 503.下一个更大元素 II | Katan&#39;s Blog</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://NiceKatan.github.io/favicon.ico?v=1615008087617">
+<link rel="stylesheet" href="https://NiceKatan.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="「 下一个更大元素 II 」
+暴力双循环嵌套判断结果
+
+
+
+优化查找次数
+
+
+朴素暴力求解法，是对每个数向右遍历，直到找到下一个比它大的数，时间复杂度为O(n2)O(n^2)O(n2)。同时暴力解法中会有浪费算力的情况，如[4,3,2,6]..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://NiceKatan.github.io">
+        <img src="https://NiceKatan.github.io/images/avatar.png?v=1615008087617" class="site-logo">
+        <h1 class="site-title">Katan&#39;s Blog</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      想让自己变成更好的人
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Katan</a> | <a class="rss" href="https://NiceKatan.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">LeetCode 503.下一个更大元素 II</h2>
+            <div class="post-date">2021-03-06</div>
+            
+              <div class="feature-container" style="background-image: url('https://NiceKatan.github.io/post-images/LC-503.jpg')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <h2 id="a-hrefhttpsleetcode-cncomproblemsnext-greater-element-ii-target_blank下一个更大元素-iia"><strong>「 <a href="https://leetcode-cn.com/problems/next-greater-element-ii/" target="_blank">下一个更大元素 II</a> 」</strong></h2>
 <h4 id="暴力双循环嵌套判断结果">暴力双循环嵌套判断结果</h4>
 <figure data-type="image" tabindex="1"><img src="https://NiceKatan.github.io/post-images/1615008006558.jpeg" alt="" loading="lazy"></figure>
 <ul>
@@ -63,15 +152,46 @@ public:
 <li>时间复杂度：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></li>
 <li>空间复杂度：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></li>
 </ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[LeetCode-354]]></title>
-        <id>https://NiceKatan.github.io/post/LC354/</id>
-        <link href="https://NiceKatan.github.io/post/LC354/">
-        </link>
-        <updated>2021-03-04T09:29:37.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="啊这啊这">啊这啊这</h1>
-]]></content>
-    </entry>
-</feed>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://NiceKatan.github.io/post/LC354/">
+                  <h3 class="post-title">
+                    LeetCode-354
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
