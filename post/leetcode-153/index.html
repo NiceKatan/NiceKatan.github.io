@@ -1,22 +1,105 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://NiceKatan.github.io</id>
-    <title>Katan&apos;s Blog</title>
-    <updated>2021-03-07T06:58:30.829Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://NiceKatan.github.io"/>
-    <link rel="self" href="https://NiceKatan.github.io/atom.xml"/>
-    <subtitle>想让自己变成更好的人</subtitle>
-    <logo>https://NiceKatan.github.io/images/avatar.png</logo>
-    <icon>https://NiceKatan.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Katan&apos;s Blog</rights>
-    <entry>
-        <title type="html"><![CDATA[LeetCode 131 分割回文串]]></title>
-        <id>https://NiceKatan.github.io/post/leetcode-153/</id>
-        <link href="https://NiceKatan.github.io/post/leetcode-153/">
-        </link>
-        <updated>2021-03-07T06:57:10.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="a-hrefhttpsleetcode-cncomproblemspalindrome-partitioning-target_blank分割回文串a"><strong>「 <a href="https://leetcode-cn.com/problems/palindrome-partitioning/" target="_blank">分割回文串</a> 」</strong></h2>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>LeetCode 131 分割回文串 | Katan&#39;s Blog</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://NiceKatan.github.io/favicon.ico?v=1615100307801">
+<link rel="stylesheet" href="https://NiceKatan.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="「 分割回文串 」
+
+题意：将输入字符串分割为回文子串，返回所有可能的结果
+
+最初思想
+由于需要返回所有可能结果，不免想到穷举法，一一枚举可能结果，但思考半天不知如何暴力求解。研习@LeetCode官方题解以及@负雪明烛后了解到可以用「回溯..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://NiceKatan.github.io">
+        <img src="https://NiceKatan.github.io/images/avatar.png?v=1615100307801" class="site-logo">
+        <h1 class="site-title">Katan&#39;s Blog</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      想让自己变成更好的人
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Katan</a> | <a class="rss" href="https://NiceKatan.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">LeetCode 131 分割回文串</h2>
+            <div class="post-date">2021-03-07</div>
+            
+            <div class="post-content" v-pre>
+              <h2 id="a-hrefhttpsleetcode-cncomproblemspalindrome-partitioning-target_blank分割回文串a"><strong>「 <a href="https://leetcode-cn.com/problems/palindrome-partitioning/" target="_blank">分割回文串</a> 」</strong></h2>
 <ul>
 <li>题意：将输入字符串分割为回文子串，<strong>返回所有可能的结果</strong></li>
 </ul>
@@ -115,56 +198,51 @@ public:
     }
 };
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[LeetCode 503.下一个更大元素 II]]></title>
-        <id>https://NiceKatan.github.io/post/LC-503/</id>
-        <link href="https://NiceKatan.github.io/post/LC-503/">
-        </link>
-        <updated>2021-03-06T02:41:24.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="a-hrefhttpsleetcode-cncomproblemsnext-greater-element-ii-target_blank下一个更大元素-iia"><strong>「 <a href="https://leetcode-cn.com/problems/next-greater-element-ii/" target="_blank">下一个更大元素 II</a> 」</strong></h2>
-<p><br></br></p>
-<h3 id="暴力双循环嵌套判断结果">暴力双循环嵌套判断结果</h3>
-<p><img src="https://NiceKatan.github.io/post-images/1615008006558.jpeg" alt="" loading="lazy"><br>
-<strong>1.优化查找次数</strong></p>
-<p><strong>朴素暴力</strong>求解法，是对每个数向右遍历，直到找到下一个比它大的数，时间复杂度为O(n^2)。同时暴力解法中会有浪费算力的情况，如<code>[4,3,2,6]</code>，暴力法会对<code>[4,3,2]</code>依次向后遍历，当寻找到6的时候才会停止遍历，而对于<code>[3,2]</code>来说显然是没有必要的，因为他们均小于4，它们下一个更大的元素一定和4相同，不需要重复遍历。根据数据元素单调的特性，就可以采用「<strong>单调栈</strong>」来实现。「<strong>单调栈</strong>」顾名思义是栈底到栈顶元素均<strong>单调递增</strong>或<strong>单调递减</strong>的，对于类似「找到比当前值大/小的最近元素」的问题都可以用「<strong>单调栈</strong>」来解决。</p>
-<p><strong>具体实现：</strong></p>
-<p>对数组进行遍历，在入栈之前进行判断：</p>
-<ul>
-<li>判断当前元素和栈顶元素大小关系：
-<ul>
-<li>当前元素&gt;栈顶元素：即当前元素可作为栈顶元素的「更大元素」，栈顶元素出栈，直到栈顶元素&gt;当前元素停止。</li>
-<li>当前元素&lt;栈顶元素：即当前元素与栈顶元素拥有同一个「更大元素」，当前元素<strong>下标</strong>入栈。</li>
-</ul>
-</li>
-<li>栈空入栈。</li>
-</ul>
-<p><strong>注意：栈内元素为元素下标而非元素本身，栈内元素可有存留(为数组最大值)。</strong></p>
-<p><strong>2.实现循环数组</strong></p>
-<p>由于题目给定一个循环数组(最后一个元素的下一个元素是数组的第一个元素)，因此我们采用遍历2*nums长度的方法，对下标 i 进行取模运算，实现循环数组。</p>
-<h3 id="代码">代码</h3>
-<pre><code class="language-c++">class Solution {
-public:
-    vector&lt;int&gt; nextGreaterElements(vector&lt;int&gt;&amp; nums) {
-        stack&lt;int&gt; temp;
-        int n=nums.size();
-        vector&lt;int&gt; res(n,-1);
-        for(int i=0;i&lt;n*2;i++){
-            while(!temp.empty()&amp;&amp;nums[i%n]&gt;nums[temp.top()]){
-                res[temp.top()]=nums[i%n];
-                temp.pop();
-            }
-            temp.push(i%n);
-        }
-        return res;
-    }
-};
-</code></pre>
-<ul>
-<li>时间复杂度：O(n)</li>
-<li>空间复杂度：O(n)</li>
-</ul>
-]]></content>
-    </entry>
-</feed>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://NiceKatan.github.io/post/LC-503/">
+                  <h3 class="post-title">
+                    LeetCode 503.下一个更大元素 II
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+
+
+
+
+  </body>
+</html>
