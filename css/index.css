@@ -892,6 +892,7 @@ kbd {
   z-index: 0;
   width: 100%;
   height: 100%;
+  background: url("/images/background.jpeg") no-repeat center/cover;
 }
 .header-banner-info {
   position: absolute;
@@ -1039,9 +1040,9 @@ kbd {
   height: 120px;
 }
 .sidebar-ov-author__avatar_img {
-  opacity: 1;
-  -ms-filter: none;
-  filter: none;
+  opacity: 2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=200)";
+  filter: alpha(opacity=200);
 }
 .sidebar-ov-author__avatar:hover .sidebar-ov-author__avatar_img {
   -webkit-animation: avatar-turn 0.8s both ease-out;
