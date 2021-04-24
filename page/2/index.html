@@ -47,18 +47,19 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0">
 <p>输入：text1 = “abcde”, text2 = “ace”<br>
 输出：3<br>
 解释：最长公共子序列是 “ace” ，它的长度为 3 。</p>
-</blockquote></div><div class="post-readmore"><a class="post-readmore__link" href="/2021/04/03/longest-common-subsequence/"><span class="post-readmore__text">阅读全文</span><span class="post-readmore__icon"><i class="fas fa-long-arrow-alt-right"></i></span></a></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2021/04/02/volume-of-histogram/">「H」LCCI 17.21.直方图水量</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2021-04-02</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2021-04-02</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">1.4k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时长</span><span class="post-meta-item__value">13分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h2 id="a-hrefhttpsleetcode-cncomproblemsvolume-of-histogram-lcci-target_blankvolume-of-histograma">
+</blockquote></div><div class="post-readmore"><a class="post-readmore__link" href="/2021/04/03/longest-common-subsequence/"><span class="post-readmore__text">阅读全文</span><span class="post-readmore__icon"><i class="fas fa-long-arrow-alt-right"></i></span></a></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2021/04/02/volume-of-histogram/">「H」LCCI 17.21.直方图水量</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2021-04-02</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2021-04-24</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">1.4k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时长</span><span class="post-meta-item__value">13分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h2 id="a-hrefhttpsleetcode-cncomproblemsvolume-of-histogram-lcci-target_blankvolume-of-histograma">
           <a href="#a-hrefhttpsleetcode-cncomproblemsvolume-of-histogram-lcci-target_blankvolume-of-histograma" class="heading-link"><i class="fas fa-link"></i></a><a class="markdownIt-Anchor" href="#a-hrefhttpsleetcode-cncomproblemsvolume-of-histogram-lcci-target_blankvolume-of-histograma"></a> <strong>「 <span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/volume-of-histogram-lcci/" target="_blank">Volume Of Histogram</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> 」</strong></h2>
       
 <p><code>单调栈</code>  <code>动态规划</code> <code>双指针</code> <code>Hard</code> <code>每日一题</code></p>
 <ul>
-<li>题目：给定一个直方图(也称柱状图)，假设有人从上面源源不断地倒水，最后直方图能存多少水量?直方图的宽度为 1。</li>
+<li><strong>题目</strong>：给定一个直方图(也称柱状图)，假设有人从上面源源不断地倒水，最后直方图能存多少水量?直方图的宽度为 1。<br>
+<img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rainwatertrap.png" alt=""></li>
 <li>由数组<code>[0,1,0,2,1,0,1,3,2,1,2,1]</code>表示的直方图，在这种情况下，可以接 6 个单位的水（蓝色部分表示水）。</li>
-<li>示例：</li>
+<li><strong>示例</strong>：</li>
 </ul>
 <blockquote>
-<p>输入：[0,1,0,2,1,0,1,3,2,1,2,1]<br>
-输出：6</p>
+<p><strong>输入</strong>：[0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]<br>
+<strong>输出</strong>：6</p>
 </blockquote>
 <ul>
 <li>本题同<span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/trapping-rain-water/">LeetCode42</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
